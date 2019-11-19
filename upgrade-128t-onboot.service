@@ -1,0 +1,12 @@
+[Unit]
+Description=128T update check
+Wants=network.target
+Before=128T.service
+
+[Service]
+Type=oneshot
+EnvironmentFile=/etc/128technology/128tupgrade_on_next_boot
+ExecStart=/usr/bin/upgrade128t.sh $UPGRADE_ON_BOOT $VERSION
+
+[Install]
+WantedBy=multi-user.target
