@@ -64,3 +64,11 @@ Apply the `upgrade-on-boot` salt state to a target asset ID, specifying the targ
 ```
 $ sudo t128-salt '<target_asset_id>' state.apply upgrade-on-boot pillar='{"upgrade_on_boot":"true","version":"<target_128T_version>"}'
 ```
+
+After this the target node should be set to attempt an upgrade on next boot.
+
+### Tip!
+What if the site administrator and the network administrator agree on a convenient time to upgrade at some point in the future, but neither one will be around to carry out the reboot? You can use `systemd-run` to schedule the node to reboot (and subsequently attempt to apply the update) automatically! Example:
+```
+sudo t128-salt '<target_asset_id>'  cmd.run 'systemd-run --on-calendar="2019-11-20 01:00:00" reboot now'
+```
