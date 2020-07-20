@@ -1,9 +1,7 @@
-# Upgrade 128T On Boot
-In certain operating environments, it may not be feasible for a Network Operations Center to closely coordinate router upgrades with a remote site. This contains implementation of a mechanism for updating 128T nodes on next system boot. The intention of this mechanism is to allow for a process in which a network administrator can prepare and send the update to a remote router node, and a site administrator can asynchronously apply the update by simply rebooting.
+# Upgrade 128T on Boot
+In certain operating environments, it may not be feasible for a Network Operations Center to closely coordinate router upgrades with a remote site. This contains an implementation of a mechanism for updating 128T nodes on next system boot. The intention is to enable a workflow in which a network administrator can prepare and send the update to a remote router node, and a site administrator can subsequently apply the update by simply rebooting.
 
-:::warning
-This is a prototype implementation, and is not part of 128 Technology's software release process. Therefore it does not receive formal testing to forward compatibility with present and future software releases. Please use this at your own risk.
-:::
+**Disclaimer**: this is a prototype implementation, and is not part of 128 Technology's software release process. Therefore it does not receive formal testing to forward compatibility with present and future software releases. Please use this at your own risk.
 
 ## Requirements
 The following requirements are to be met with this mechanism.
